@@ -32,7 +32,7 @@ jobs:
 
       - name: Commit documentation
         env:
-          GIT_URL: "git@github.com:Lhcfl/node-discourse-api.git"
+          GIT_URL: "git@github.com:Lhcfl/silly-db.git"
         run: |
           cd docs
           git init
