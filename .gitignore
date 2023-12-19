@@ -1,0 +1,9 @@
+node_modules/
+pnpm-lock.yaml
+# 构建产物
+lib/
+docs/
+.tsbuildinfo
+# 测试产物
+log/
+dev-log/

@@ -1,0 +1,42 @@
+{
+  "name": "silly-db",
+  "version": "1.0.0",
+  "description": "JSON based, silly db",
+  "main": "lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "author": "Lhc_fl",
+  "license": "MIT",
+  "scripts": {
+    "prepublishOnly": "tsc && tsc-alias",
+    "postpublish": "git push origin main",
+    "devprepare": "husky install",
+    "build": "tsc && tsc-alias",
+    "pretty": "prettier -c .",
+    "pretty:fix": "prettier -w .",
+    "lint": "eslint . --ext .ts,.js",
+    "lint:fix": "eslint . --fix --ext .ts,.js",
+    "autofix": "node .husky/auto-fix.js",
+    "git:commit": "git add . && git commit",
+    "git:push": "yarn git:commit && git push origin main",
+    "doc:generate": "typedoc",
+    "test": "node .husky/tester.js full",
+    "t": "yarn build && tsc test/test.ts && node test/test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.9",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "prettier": "^3.0.3",
+    "ts-node": "^10.9.1",
+    "tsc-alias": "^1.8.7",
+    "typedoc": "^0.25.1",
+    "typescript": "^5.2.2"
+  }
+}

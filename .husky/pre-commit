@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+. "$(dirname -- "$0")/_/husky.sh"
+
+node "$(dirname -- "$0")/tester.js" -f pre-commit
